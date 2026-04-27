@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doces da Bah | Cardápio Digital</title>
+    <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body>
 
+    <header>
+        <div class="logo">Doces da Bah</div>
+    </header>
+
+    <main class="container">
+        
+        <div class="categoria-secao">
+            <h2 class="titulo-categoria">Fatias de Brownie</h2>
+            <div class="grid-produtos">
+                <div class="card">
+                    <img src="img/fatia-ninho.jpg" alt="Brownie Ninho">
+                    <div class="card-detalhes">
+                        <h3>Ninho com Nutella</h3>
+                        <p>Massa molhadinha com creme de Ninho.</p>
+                        <span class="preco">R$ 24,90</span>
+                        <button class="btn-add" onclick="adicionar('Brownie Ninho', 24.90)">Adicionar +</button>
+                    </div>
+                </div>
+                </div>
+        </div>
+
+        <div class="categoria-secao">
+            <h2 class="titulo-categoria">Cremes de Açaí</h2>
+            <div class="grid-produtos">
+                <div class="card">
+                    <img src="img/acai-copo.jpg" alt="Açaí">
+                    <div class="card-detalhes">
+                        <h3>Açaí 300ml</h3>
+                        <span class="preco">R$ 13,00</span>
+                        <button class="btn-add" onclick="adicionar('Açaí 300ml', 13.00)">Adicionar +</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div id="sacola-flutuante" class="sacola-container" style="display: none;">
+        <div class="sacola-info">
+            <span id="itens-count">0 itens</span>
+            <span id="valor-total">R$ 0,00</span>
+        </div>
+        <button class="btn-checkout" onclick="abrirModal()">Ver Sacola</button>
+    </div>
+
+    <div id="modal-pedido" class="modal">
+        <div class="modal-corpo">
+            <h3>Finalizar Pedido</h3>
+            <div id="itens-lista"></div>
+            <input type="text" id="cliente-nome" placeholder="Seu Nome">
+            <input type="text" id="cliente-endereco" placeholder="Endereço Completo">
+            <button class="btn-zap" onclick="enviar()">Pedir no WhatsApp</button>
+            <button class="btn-fechar" onclick="fecharModal()">Voltar</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
